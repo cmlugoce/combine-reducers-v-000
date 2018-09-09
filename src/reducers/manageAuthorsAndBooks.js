@@ -9,10 +9,7 @@ import uuid from "uuid";
   let idx;
   switch (action.type) {
     case "ADD_BOOK":
-      return {
-        ...state,
-        books: [...state.books, action.book]
-      };
+        return [...state, action.book];
 
     case "REMOVE_BOOK":
       idx = state.books.indexOf(action.id);
